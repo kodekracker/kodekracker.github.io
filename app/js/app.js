@@ -5,7 +5,7 @@ var app = angular.module('myApp',['ngRoute']);
 app.config(['$httpProvider', function($httpProvider){
   $httpProvider.defaults.headers.post = {
     'Content-Type': 'application/json',
-    'Authorization' : 'Token 8c5d90f60eac4649380258cab050406c429c1aff'};
+    'Authorization' : 'Token e71339e1c235b269feb19bd5f3486f99b8feba58'};
 
 }]);
 
