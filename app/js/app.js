@@ -1,9 +1,15 @@
 'use strict';
 
-var app = angular.module('myApp',[]);
+var app = angular.module('myApp',['ngRoute']);
 
+app.config(['$httpProvider', function($httpProvider){
+  $httpProvider.defaults.headers.post = {
+    'Content-Type': 'application/json',
+    'Authorization' : 'Token 8c5d90f60eac4649380258cab050406c429c1aff'};
 
-app.controller('MyController', function($scope) {
+}]);
+
+app.controller('MyController', function($scope, $http) {
   $scope.form = {
     title: "Contact Me",
     success : false,
@@ -18,13 +24,29 @@ app.controller('MyController', function($scope) {
 
   $scope.defaultPerson = angular.copy($scope.person);
 
+  var api_root_url = 'https://webservices-akshayon-net.herokuapp.com'
+
   $scope.submitForm = function(isValid) {
 
     // check to make sure the form is completely valid
     if (isValid) {
-      $scope.form.error = true;
+      var form_data = {
+        'first_name': $scope.person.firstname,
+        'last_name': $scope.person.lastname,
+        'email_from': $scope.person.email,
+        'message': $scope.person.message
+      }
       $scope.person = angular.copy($scope.defaultPerson);
       $scope.contactForm.$setPristine();
+
+      // Send message to admin email-id
+      $http.post(api_root_url+'/api/mails/', form_data).
+        success(function(data, status, headers, config){
+          $scope.form.success = true;
+        }).
+        error(function(data, status, headers, config) {
+          $scope.form.error = true;
+        });
     }
 
   };
