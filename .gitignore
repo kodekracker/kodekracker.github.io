@@ -1,6 +1,9 @@
 # python compiled files
 *.pyc
 
+# app index page
+app/index.html
+
 # virtual environment directory
 venv/
 

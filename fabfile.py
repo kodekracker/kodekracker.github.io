@@ -80,7 +80,7 @@ def publish_github():
     print "* Building project for production"
 
     # Push to github master branch
-    run('ghp-import -r origin -b master -pm "(updated): site updated" app')
+    local('ghp-import -r origin -b master -pm "(updated): site updated" app')
 
     print '\n===> Successfully published to github pages.'
     print "\n     Go to http://akshayon.net "
