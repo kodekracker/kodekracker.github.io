@@ -1,0 +1,25 @@
+{
+    "css": [
+        "css/normalize.css",
+        "css/bootstrap.min.css",
+        "css/font-awesome.min.css",
+        "css/animate.css",
+        "css/creative-brands.css",
+        "css/vertical-carousel.css",
+        "css/custom.css"
+    ],
+    "js": [
+        "js/vendor/jquery-1.11.3.min.js",
+        "js/vendor/bootstrap.min.js",
+        "js/vendor/creative-brands.js",
+        "js/vendor/jquery.easy-pie-chart.js",
+        "js/vendor/modernizr.custom.js",
+        "js/vendor/waypoints.min.js",
+        "js/vendor/jquery.countTo.js",
+        "js/vendor/jqBootstrapValidation.js",
+        "js/vendor/angular.min.js",
+        "js/vendor/angular-route.min.js",
+        "js/custom.js",
+        "js/app.js"
+    ]
+}

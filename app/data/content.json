@@ -1,0 +1,123 @@
+{
+    "menu": [
+        {
+            "text": "About Me",
+            "href": "about"
+        },
+        {
+            "text": "Contact",
+            "href": "contact"
+        }
+    ],
+    "brand": {
+        "name": "#kodekracker",
+        "img_src": "images/jonathan.png"
+    },
+    "owner":{
+        "name": "Akshay Pratap Singh",
+        "img_src": "images/jonathan.png",
+        "interest": "Web Development and Data Science",
+        "hire_me": false,
+        "highlighted_skills": [
+            {
+                "text": "Data Science Enthusiast",
+                "fa_class": "fa-line-chart"
+            },
+            {
+                "text": "Web Developer",
+                "fa_class": "fa-trophy"
+            },
+            {
+                "text": "Avid Programmer",
+                "fa_class": "fa-code"
+            }
+        ],
+        "about": "Web Developer/Designer proficient in a wide variety of web applications and also Data Science enthusiast. Specially interested in web development using Python, Javascript , Angular , Mongodb and also in Data Science related projects of Data Mining, Data Analysis &amp; Machine Learning.",
+        "address": "Noida,U.P, India - 201301",
+        "mobile_numbers": "+91-7838792774, +91-8477063529",
+        "timeline": [
+            {
+                "event_info": "Graduated HighSchool",
+                "event_year": "2008"
+            },
+            {
+                "event_info": "Graduated Higher Secondary School",
+                "event_year": "2010"
+            },
+            {
+                "event_info": "Internship in Ophio",
+                "event_year": "2014"
+            },
+            {
+                "event_info": "Graduated from SMVDU",
+                "event_year": "2015"
+            },
+            {
+                "event_info": "Software Developer in 91springboard",
+                "event_year": "2015"
+            }
+        ],
+        "skills": [
+            {
+                "name": "CSS",
+                "percent": "60"
+            },
+            {
+                "name": "HTML",
+                "percent": "80"
+            },
+            {
+                "name": "Code",
+                "percent": "60"
+            },
+            {
+                "name": "Design",
+                "percent": "50"
+            }
+        ],
+        "favourite_quote": {
+            "text": "Design is not just what it looks like and feels like. Design is how it works.",
+            "author": "Steve Jobs"
+        },
+        "projects": [
+            {
+                "name": "Project 1",
+                "img_src": "images/ref1.png",
+                "description": "This is the description.",
+                "duration": ""
+            }
+        ]
+    },
+    "social":[
+        {
+            "name": "Facebook",
+            "profile_url": "https://www.facebook.com/AKSHAYPRATAP007",
+            "fa_class": "fa-facebook"
+        },
+        {
+            "name": "Twitter",
+            "profile_url": "https://twitter.com/KodeKracker",
+            "fa_class": "fa-twitter"
+        },
+        {
+            "name": "Google Plus",
+            "profile_url": "https://plus.google.com/+AkshayPratap_01",
+            "fa_class": "fa-google-plus"
+        },
+        {
+            "name": "Linkedin",
+            "profile_url": "https://in.linkedin.com/in/akshaypratapsingh",
+            "fa_class": "fa-linkedin"
+        },
+        {
+            "name": "Github",
+            "profile_url": "https://github.com/KodeKracker/",
+            "fa_class": "fa-github"
+        },
+        {
+            "name": "Stackoverflow",
+            "profile_url": "https://careers.stackoverflow.com/kodekracker",
+            "fa_class": "fa-stack-overflow"
+        }
+    ]
+}

@@ -1,2 +1,3 @@
 livereload
 fabric
+jinja2

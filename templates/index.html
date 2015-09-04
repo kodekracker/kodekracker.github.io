@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+<!-- Title of a Page -->
+{% block title%} {$ data.head.title $} {% endblock title %}
+
+<!-- Header Block Content -->
+{% block header %}
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavigation"><i class="fa fa-bars"></i></button>
+                <img src="{$ data.content.brand.img_src $}" class="navbar-logo pull-left" alt="" />
+                <a href="#" class="navbar-brand animated flipInX">{$ data.content.brand.name $}</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="myNavigation">
+
+                <ul class="nav navbar-nav navbar-right animated flipInX">
+                    {% for menu in data.content.menu -%}
+                    <li><a href="#{$ menu.href $}" class="scroll">{$ menu.text $}</a></li>
+                    {% endfor %}
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+    <div class="jumbotron">
+        <img src="{$ data.content.owner.img_src $}" class="img-responsive scrollpoint sp-effect3" alt="" />
+        <div class="social-wrapper">
+            <ul class="brands brands-inline hidden-xs scrollpoint sp-effect1">
+                {% for social in data.content.social[:3] -%}
+                <li><a href="{$ social.profile_url $}" target="_blank"><i class="fa {$ social.fa_class $}  hi-icon-effect-8"></i></a></li>
+                {% endfor %}
+            </ul>
+            <h2 class="scrollpoint sp-effect3">Akshay Pratap Singh</h2>
+            <ul class="brands brands-inline hidden-xs scrollpoint sp-effect2">
+                {% for social in data.content.social[3:] -%}
+                <li><a href="{$ social.profile_url $}" target="_blank"><i class="fa {$ social.fa_class $}  hi-icon-effect-8"></i></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- Slideshow start -->
+        <div id="slideshow" class="carousel slide vertical scrollpoint sp-effect3" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slideshow item 1 active -->
+                <div class="item active"><h3>I <i class="fa fa-heart icon-first"></i> {$ data.content.owner.interest $}</h3></div>
+
+                <!-- Slideshow other items -->
+                {% for hg_skills in data.content.owner.highlighted_skills -%}
+                <div class="item"><h3>{$ hg_skills.text $} <i class="fa {$ hg_skills.fa_class $} icon"></i></h3></div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Slideshow end -->
+        <a href="#about" class="btn btn-reference btn-lg scroll scrollpoint sp-effect1" role="button"><i class="fa fa-smile-o"></i> Know me better</a>
+
+        {% if data.content.owner.hire_me -%}
+        <a href="#contact" class="btn btn-reference btn-lg btn-active scroll scrollpoint sp-effect2" role="button"><i class="fa fa-bolt"></i> Hire me</a>
+        {% endif %}
+    </div>
+{% endblock header %}
+
+<!-- About Block Content -->
+{% block about %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 hidden-xs scrollpoint sp-effect1"><!-- Profile image -->
+                <img src="{$ data.content.owner.img_src $}" class="image-bordered img-responsive" alt="" />
+            </div><!-- Profile end -->
+
+            <div class="col-md-7 col-sm-6 scrollpoint sp-effect1"><!-- Profile description -->
+                <h3>{$ data.content.owner.name $}</h3>
+                <p>{$ data.content.owner.about $}</p>
+
+                <div class="tweets"><!-- Tweets row -->
+                    <!-- Tweets slideshow -->
+                         <div class="media">
+                                <div class="pull-left"><i class="fa fa-twitter"></i></div>
+                                <div class="media-body">
+                                    <div id="slideshow1" class="carousel slide" data-ride="carousel">
+                                          <div class="carousel-inner">
+                                           <!-- Slideshow item 1 active -->
+                                              <div class="item active">
+                                                    <p>What you do today is important because you are exchanging a day of your #life for it.</p>
+                                              </div>
+                                           <!-- Slideshow item 2 -->
+                                              <div class="item">
+                                                    <p>"Never give up. Never let things out of your control dictate who you are."</p>
+                                              </div>
+
+                                            <!-- Slideshow item 3 -->
+                                              <div class="item">
+                                                    <p>Yesterday is #history; tomorrow is a mystery. Today is a #gift, which is why we call it the #present.</p>
+                                              </div>
+                                          </div>
+                                     </div>
+                                </div>
+                         </div>
+                   <!-- Tweets slideshow end -->
+                </div><!-- Tweets row end -->
+           </div><!-- Profile description end-->
+
+          <div class="col-md-3 col-sm-4 scrollpoint sp-effect2"><!--Timeline-->
+
+              <div class="timeline">
+                  <!-- Timeline Items START -->
+                  {% for event in data.content.owner.timeline %}
+                  <div class="event">
+                      <div class="event-info">
+                        <div class="date">{$ event.event_year $}</div>
+                      </div>
+                      <span>{$ event.event_info $}</span>
+                  </div>
+                  {%  endfor %}
+                  <!-- Timeline Items END -->
+
+              </div><!--timeline-->
+          </div><!--col 3 end-->
+
+        </div><!--Row about end-->
+
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a id="skills-toggle" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> Check my skills</a>
+            </div>
+        </div>
+    </div><!-- Container end-->
+
+    <div id="skills">
+        <div class="container">
+            <!-- Toogle my skills start -->
+            <div class="row">
+                {% for skill in data.content.owner.skills[:4] %}
+                <div class="col-md-3">
+                    <div class="chart" data-percent="{$ skill.percent $}">{$ skill.percent $}% {$ skill.name $}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for skill in data.content.owner.skills[4:] %}
+                <div class="col-md-3">
+                    <div class="chart" data-percent="{$ skill.percent $}">{$ skill.percent $}% {$ skill.name $}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Toogle my skills end-->
+
+        </div><!-- Container end-->
+    </div>
+{% endblock about %}
+
+<!-- Quote Block Content -->
+{% block quote %}
+    <div class="container">
+        <div class="row scrollpoint sp-effect3">
+            <div class="col-sm-8 col-sm-offset-2">
+                <blockquote class="blockquote-reverse">
+                    <p><i class="fa fa-quote-left"></i>{$ data.content.owner.favourite_quote.text $}</p>
+                    <footer>{$ data.content.owner.favourite_quote.author $}</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+{% endblock quote %}
+
+<!-- Project Block Content -->
+{% block project %}
+{% endblock project %}
+
+<!-- Blog Block Content -->
+{% block blog %}
+    <div class="container">
+        <h2 class="scrollpoint sp-effect3">Latest Blog Posts</h2>
+        <p class="scrollpoint sp-effect3">To visit my complete blog , go to <a href="http://blog.akshayon.net" class="fancy-link">blog.akshayon.net</a></p>
+    </div>
+{% endblock blog%}
+
+<!-- Testimonials Content -->
+{% block testimonials %}
+{% endblock testimonials%}
+
+<!-- Contact Content -->
+{% block contact %}
+<div class="container" ng-controller="MyController">
+        <h2 class="scrollpoint sp-effect3">{{ form.title }}</h2>
+        <div class="contact-alert">
+            <div class="alert alert-success" ng-show="form.success">
+                <button type="button" class="close" ng-click="form.success=false" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <strong>Your message has been sent.</strong>
+            </div>
+            <div class="alert alert-danger" ng-show="form.error">
+                <button type="button" class="close" ng-click="form.error=false" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <strong>Sorry, it seems that my mail server is not responding. Please try again later!</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="images/macbook.png" class="img-responsive hidden-xs" alt="">
+
+                <div class="macbook-inner black">
+                    <div class="row scrollpoint sp-effect4">
+                        <div class="col-sm-8">
+                            <h3 class="hidden-xs">Leave a message</h3>
+
+                            <form role="form" id="contactForm" name="contactForm" ng-submit="submitForm(contactForm.$valid)" novalidate>
+
+                                <div class="form-group control-group" ng-class="{ 'has-error' : contactForm.firstname.$invalid && !contactForm.firstname.$pristine }">
+                                    <div class="controls">
+                                        <p ng-show="contactForm.firstname.$invalid && !contactForm.firstname.$pristine"class="help-block">First Name is required.</p>
+                                        <input type="text" name="firstname" class="form-control" placeholder="First Name" id="firstname" ng-model="person.firstname" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group control-group" ng-class="{ 'has-error' : contactForm.lastname.$invalid && !contactForm.lastname.$pristine }">
+                                    <div class="controls">
+                                        <p ng-show="contactForm.lastname.$invalid && !contactForm.lastname.$pristine"class="help-block">Last Name is required.</p>
+                                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" id="lastname" ng-model="person.lastname" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group control-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+                                    <div class="controls">
+                                        <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine"class="help-block">Email is required.</p>
+                                        <input type="email" name="email" class="form-control" placeholder="Email" id="email" ng-model="person.email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group control-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
+                                    <div class="controls">
+                                        <p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine"class="help-block">Message is required.</p>
+                                        <textarea class="form-control" name="message" placeholder="Message" id="message" ng-model="person.message" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Send message</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-sm-4">
+                        <img src="{$ data.content.owner.img_src $}" class="contact-image image-responsive hidden-xs hidden-sm" alt="" />
+                            <div class="contact-info">
+                                <p>{$ data.content.owner.name $}</p>
+                                <p>{$ data.content.owner.address $}</p>
+                                <p>{$ data.content.owner.mobile_numbers $}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock contact%}
+
+<!-- Footer Content -->
+{% block footer %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 scrollpoint sp-effect3">
+
+                    <ul class="brands brands-inline">
+                        {% for social in data.content.social %}
+                        <li><a href="{$ social.profile_url $}" target="_blank"><i class="fa {$ social.fa_class $}  hi-icon-effect-8"></i></a></li>
+                        {% endfor %}
+                    </ul>
+
+                <p>&copy {$ data.content.owner.name $} 2015, All right reserved.
+            </div>
+        </div>
+    </div>
+{% endblock footer%}
