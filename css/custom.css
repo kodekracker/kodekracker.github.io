@@ -602,6 +602,26 @@ blockquote footer {
     background-color:#ffffff;
 }
 
+/* Project Modal */
+.modal-title{
+    color: #4E4747;
+}
+
+.modal-body{
+    color: #4E4747;
+    font-size: 16px;
+    text-align: left;
+}
+
+.project-attr > span{
+    color: #4E4747;
+    font-weight: bold;
+}
+
+.project-attr > span > i{
+    font-size: 18px;
+}
+
 /*------------------------------
     BLOG
 ------------------------------*/
