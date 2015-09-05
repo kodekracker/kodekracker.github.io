@@ -158,8 +158,56 @@
 {% endblock quote %}
 
 <!-- Project Block Content -->
-{% block project %}
-{% endblock project %}
+{% block projects %}
+    <h2 class="scrollpoint sp-effect3">Projects</h2>
+   <ul class="grid cs-style-4">
+        {% for project in data.content.owner.projects -%}
+        <li>
+            <figure class="scrollpoint sp-effect1">
+                <div><img src="{$ project.img_src $}" alt="{$ project.name $}"></div>
+                <figcaption>
+                    <h3>{$ project.name $}</h3>
+                    <a href="" data-toggle="modal" data-target="#modal{$ loop.index $}">Read more</a>
+                </figcaption>
+            </figure>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Project Modal Box -->
+    {% for project in data.content.owner.projects %}
+    <div class="modal fade" id="modal{$ loop.index $}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="myModalLabel">{$ project.name $}</h3>
+          </div>
+          <div class="modal-body">
+              <div class="project-attr">
+                    <span><strong>Description</strong></span>
+                    <p>{$ project.description $}</p>
+              </div>
+              <div class="project-attr">
+                    <span><i class="fa fa-calendar"></i> Duration : </span>
+                    {$ project.duration.time $} ( {$ project.duration.start_date $} - {$ project.duration.end_date $} )
+              </div>
+              <div class="project-attr">
+                    <span><i class="fa fa-users"></i> Team : </span>
+                    {$ project.team $}
+              </div>
+              <div class="project-attr">
+                    <span><i class="fa fa-github"></i> Source : </span>
+                    <a href="{$ project.source_url $}" target="_blank">
+                    {$ project.source_url $} <i class="fa fa-external-link"></i>
+                    </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+{% endblock projects %}
 
 <!-- Blog Block Content -->
 {% block blog %}
