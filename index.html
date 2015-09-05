@@ -59,7 +59,7 @@
         <![endif]-->
         
     </head>
-    <body id="page-top">
+    <body id="page-top" ng-controller="MyController">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -156,18 +156,9 @@
                                 <div class="media-body">
                                     <div id="slideshow1" class="carousel slide" data-ride="carousel">
                                           <div class="carousel-inner">
-                                           <!-- Slideshow item 1 active -->
-                                              <div class="item active">
-                                                    <p>What you do today is important because you are exchanging a day of your #life for it.</p>
-                                              </div>
-                                           <!-- Slideshow item 2 -->
-                                              <div class="item">
-                                                    <p>"Never give up. Never let things out of your control dictate who you are."</p>
-                                              </div>
-
-                                            <!-- Slideshow item 3 -->
-                                              <div class="item">
-                                                    <p>Yesterday is #history; tomorrow is a mystery. Today is a #gift, which is why we call it the #present.</p>
+                                           <!-- Tweet Item -->
+                                              <div class="item" ng-repeat="tweet in tweets" ng-class="{'active': $first}">
+                                                    <p>{{ tweet.text }}</p>
                                               </div>
                                           </div>
                                      </div>
@@ -329,7 +320,7 @@
         =========================== -->
         <section id="contact" class="content-first">
         
-<div class="container" ng-controller="MyController">
+<div class="container">
         <h2 class="scrollpoint sp-effect3">{{ form.title }}</h2>
         <div class="contact-alert">
             <div class="alert alert-success" ng-show="form.success">
@@ -454,6 +445,7 @@
         <script src="js/vendor/jqBootstrapValidation.js"></script>
         <script src="js/vendor/angular.min.js"></script>
         <script src="js/vendor/angular-route.min.js"></script>
+        <script src="js/vendor/angular-resource.min.js"></script>
         <script src="js/custom.js"></script>
         <script src="js/app.js"></script>
         

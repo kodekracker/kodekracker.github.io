@@ -19,6 +19,7 @@
         "js/vendor/jqBootstrapValidation.js",
         "js/vendor/angular.min.js",
         "js/vendor/angular-route.min.js",
+        "js/vendor/angular-resource.min.js",
         "js/custom.js",
         "js/app.js"
     ]
