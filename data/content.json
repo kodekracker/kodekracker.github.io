@@ -5,6 +5,10 @@
             "href": "about"
         },
         {
+            "text": "Projects",
+            "href": "projects"
+        },
+        {
             "text": "Contact",
             "href": "contact"
         }

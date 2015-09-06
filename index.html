@@ -59,7 +59,7 @@
         <![endif]-->
         
     </head>
-    <body id="page-top" ng-controller="MyController">
+    <body id="page-top" ng-controller="MyController" ontouchstart="">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -86,6 +86,7 @@
 
                 <ul class="nav navbar-nav navbar-right animated flipInX">
                     <li><a href="#about" class="scroll">About Me</a></li>
+                    <li><a href="#projects" class="scroll">Projects</a></li>
                     <li><a href="#contact" class="scroll">Contact</a></li>
                     
                 </ul>
@@ -786,6 +787,35 @@
     <div class="container">
         <h2 class="scrollpoint sp-effect3">Latest Blog Posts</h2>
         <p class="scrollpoint sp-effect3">To visit my complete blog , go to <a href="http://blog.akshayon.net" class="fancy-link">blog.akshayon.net</a></p>
+    </div>
+
+    <div class="line hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- BLOG POST - Start -->
+            <div class="col-sm-4 scrollpoint sp-effect1">
+                <div class="blog-post" ng-repeat="blog in blogs">
+                    <div class="blog-body">
+                        <h3>{{ blog.title }}</h3>
+                        <p>{{ blog.summary.plaintext | cut:true:200:'...' }}</p>
+                        <a href="{{ blog.link }}" class="btn btn-primary" target="_blank">Read More</a>
+                    </div>
+                    <div class="blog-info">
+                        <a><i class="fa fa-calendar"></i> {{ blog.updated_date }}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- BLOG POST - End -->
+        </div>
     </div>
 
         </section>
