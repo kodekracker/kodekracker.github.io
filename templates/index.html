@@ -215,6 +215,35 @@
         <h2 class="scrollpoint sp-effect3">Latest Blog Posts</h2>
         <p class="scrollpoint sp-effect3">To visit my complete blog , go to <a href="http://blog.akshayon.net" class="fancy-link">blog.akshayon.net</a></p>
     </div>
+
+    <div class="line hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- BLOG POST - Start -->
+            <div class="col-sm-4 scrollpoint sp-effect1">
+                <div class="blog-post" ng-repeat="blog in blogs">
+                    <div class="blog-body">
+                        <h3>{{ blog.title }}</h3>
+                        <p>{{ blog.summary.plaintext | cut:true:200:'...' }}</p>
+                        <a href="{{ blog.link }}" class="btn btn-primary" target="_blank">Read More</a>
+                    </div>
+                    <div class="blog-info">
+                        <a><i class="fa fa-calendar"></i> {{ blog.updated_date }}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- BLOG POST - End -->
+        </div>
+    </div>
 {% endblock blog%}
 
 <!-- Testimonials Content -->

@@ -17,6 +17,14 @@ $(window).scroll(function(){
 
 $(document).ready(function() {
 
+    $(".cs-style-4 figure").bind("touchstart click", function () {
+        console.log("Touch start");
+        $(this).addClass("cs-active");
+        setTimeout(function(){
+            $(".cs-style-4 figure").removeClass("cs-active");
+        }, 2000);
+    });
+
     $("a.scroll[href^='#']").on('click', function(e) {
         e.preventDefault();
         var hash = this.hash;

@@ -554,7 +554,7 @@ blockquote footer {
 }
 
 .no-touch .cs-style-4 figure:hover img,
-.cs-style-4 figure.cs-hover img {
+.cs-style-4 figure.cs-active img {
     -webkit-transform: translateX(25%);
     -moz-transform: translateX(25%);
     -ms-transform: translateX(25%);
@@ -580,7 +580,7 @@ blockquote footer {
 }
 
 .no-touch .cs-style-4 figure:hover figcaption,
-.cs-style-4 figure.cs-hover figcaption {
+.cs-style-4 figure.cs-active figcaption {
     opacity: 1;
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -938,8 +938,8 @@ blockquote footer {
         margin-top:25px;
     }
 
-    #services {
-        height:auto;
+    .grid figcaption h3 {
+        font-size: 24px;
     }
 
     #carousel-reference {
@@ -1202,6 +1202,10 @@ blockquote footer {
 
 @media (max-width:600px) {
 
+    .navbar-default .navbar-brand {
+        font-size: 22px;
+    }
+
     .timeline {
         margin:25px 0 0 270px;
     }
@@ -1213,6 +1217,10 @@ blockquote footer {
     .event .event-info .date {
         margin-left:185px;
     }
+
+    .grid figcaption h3 {
+        font-size: 22px;
+    }
 }
 
 /*------------------------------
@@ -1221,6 +1229,9 @@ blockquote footer {
 
 @media (max-width:548px) {
 
+    .navbar-default .navbar-brand {
+        font-size: 20px;
+    }
 
     .timeline {
         margin:25px 0 0 245px;
@@ -1238,8 +1249,8 @@ blockquote footer {
         width: 370px;
     }
 
-    .pricing-table {
-        margin:0 30px;
+    .grid figcaption h3 {
+        font-size: 20px;
     }
 }
 
@@ -1248,6 +1259,11 @@ blockquote footer {
 ------------------------------*/
 
 @media (max-width:480px) {
+
+    .navbar-default .navbar-brand {
+        font-size: 18px;
+    }
+
     .timeline {
         margin:25px 0 0 210px;
     }
@@ -1260,6 +1276,10 @@ blockquote footer {
         margin-left:125px;
     }
 
+    .grid figcaption h3 {
+        font-size: 18px;
+    }
+
     .blog-post {
         margin:0 10px 25px;
     }
@@ -1270,6 +1290,10 @@ blockquote footer {
 ------------------------------*/
 
 @media (max-width:320px) {
+
+    .navbar-default .navbar-brand {
+        font-size: 15px;
+    }
 
     .jumbotron .btn {
         margin-bottom:15px;
@@ -1300,8 +1324,8 @@ blockquote footer {
         width: 280px;
     }
 
-    .pricing-table {
-        margin:0;
+    .grid figcaption h3 {
+        font-size: 15px;
     }
 
 }
