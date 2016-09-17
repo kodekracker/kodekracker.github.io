@@ -12,7 +12,7 @@ $ pip -r requirements.txt
 ```
 2. To run this source in browser
 ```shell    
-$ fab live_build
+$ fab live_run
 ```
 3. To push source to github pages
 ```shell

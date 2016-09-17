@@ -15,22 +15,34 @@ def gather_data(dir_name="."):
     """
     data = {}
     # Read head file and collect data
-    with open(dir_name+"/head.json") as head_json_data:
-        head_data = json.load(head_json_data)
-        data.update({"head": head_data })
-        print "* Head Data Loaded..."
+    try:
+        with open(dir_name+"/head.json") as head_json_data:
+            head_data = json.load(head_json_data)
+            data.update({"head": head_data })
+            print "* Head Data Loaded..."
+    except Exception as e:
+        print "Error while processing head.json"
+        raise e
 
     # Read resource file and collect data
-    with open(dir_name+"/resource.json") as resource_json_data:
-        resource_data = json.load(resource_json_data)
-        data.update({"resource": resource_data })
-        print "* Resource Data Loaded"
+    try:
+        with open(dir_name+"/resource.json") as resource_json_data:
+            resource_data = json.load(resource_json_data)
+            data.update({"resource": resource_data })
+            print "* Resource Data Loaded"
+    except Exception as e:
+        print "Error while processing resource.json"
+        raise e
 
     # Read body content file and collect data
-    with open(dir_name+"/content.json") as content_json_data:
-        content_data = json.load(content_json_data)
-        data.update({"content": content_data })
-        print "* Content Data Loaded..."
+    try:
+        with open(dir_name+"/content.json") as content_json_data:
+            content_data = json.load(content_json_data)
+            data.update({"content": content_data })
+            print "* Content Data Loaded..."
+    except Exception as e:
+        print "Error while processing content.json"
+        raise e
 
     # Get Google Analytics ID and add it to data
     data.update({"google_analytics_id": settings.GOOGLE_ANALYTICS_ID})
@@ -66,9 +78,9 @@ def live_run(port=8080):
     # Set livereload server watchers and start it
     server = Server()
     server.watch('app/')
-    server.watch('data/', build)
-    server.watch('templates/', build)
-    server.serve(root="app/", open_url=True, liveport=35729, port=port)
+    server.watch('app/data/*.json', build)
+    server.watch('templates/*.html', build)
+    server.serve(root="app/", open_url_delay=True, liveport=35729, port=port)
 
 @task
 def publish_github():

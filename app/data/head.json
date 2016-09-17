@@ -1,10 +1,15 @@
 {
     "meta":{
-        "Description": "A personal portfolio portal to showcase my works, skills and also allow people to contact me.",
-        "Keywords": "kodekracker, akshaypratapsingh, smvdu,chandausi, webdeveloper",
+        "description": "A personal portfolio portal to showcase my works, skills and also allow people to contact me.",
+        "keywords": "kodekracker,akshaypratapsingh,smvdu,chandausi, webdeveloper,91springboard,spratapakshay,akshay",
         "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
         "google": "nositelinkssearchbox",
-        "robots": "noodp, noimageindex"
+        "robots": "noodp, noimageindex",
+        "og:title": "#kodekracker - Akshay Pratap Singh",
+        "og:description":"A Polyglot Programmer and Software Developer @91springboard",
+        "og:image": "http://akshayon.net/images/profile.png",
+        "og:url": "http://akshayon.net",
+        "og:type": "website"
     },
     "title": "#kodekracker - Akshay Pratap Singh"
 }
