@@ -15,11 +15,11 @@
     ],
     "brand": {
         "name": "#kodekracker",
-        "img_src": "images/jonathan.png"
+        "img_src": "images/profile.png"
     },
     "owner":{
         "name": "Akshay Pratap Singh",
-        "img_src": "images/jonathan.png",
+        "img_src": "images/profile.png",
         "interest": "Web Development and Data Science",
         "hire_me": false,
         "highlighted_skills": [
@@ -32,7 +32,7 @@
                 "fa_class": "fa-trophy"
             },
             {
-                "text": "Avid Programmer",
+                "text": "Polyglot and Avid Programmer",
                 "fa_class": "fa-code"
             }
         ],
@@ -63,20 +63,24 @@
         ],
         "skills": [
             {
-                "name": "CSS",
-                "percent": "60"
+              "name": "CSS",
+              "percent": "60"
             },
             {
-                "name": "HTML",
-                "percent": "80"
+              "name": "HTML",
+              "percent": "80"
             },
             {
-                "name": "Code",
-                "percent": "60"
+              "name": "JS",
+              "percent": "50"
             },
             {
-                "name": "Design",
-                "percent": "50"
+              "name": "Python",
+              "percent": "60"
+            },
+            {
+              "name": "NodeJS",
+              "percent": "50"
             }
         ],
         "favourite_quote": {
@@ -233,12 +237,12 @@
     "social":[
         {
             "name": "Facebook",
-            "profile_url": "https://www.facebook.com/AKSHAYPRATAP007",
+            "profile_url": "https://www.facebook.com/spratapakshay",
             "fa_class": "fa-facebook"
         },
         {
             "name": "Twitter",
-            "profile_url": "https://twitter.com/KodeKracker",
+            "profile_url": "https://twitter.com/spratapakshay",
             "fa_class": "fa-twitter"
         },
         {
@@ -248,12 +252,12 @@
         },
         {
             "name": "Linkedin",
-            "profile_url": "https://in.linkedin.com/in/akshaypratapsingh",
+            "profile_url": "https://in.linkedin.com/in/spratapakshay",
             "fa_class": "fa-linkedin"
         },
         {
             "name": "Github",
-            "profile_url": "https://github.com/KodeKracker/",
+            "profile_url": "https://github.com/KodeKracker",
             "fa_class": "fa-github"
         },
         {
