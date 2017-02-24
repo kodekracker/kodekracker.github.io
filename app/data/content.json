@@ -36,9 +36,9 @@
                 "fa_class": "fa-code"
             }
         ],
-        "about": "Web Developer/Designer proficient in a wide variety of web applications and also Data Science enthusiast. Specially interested in web development using Python, NodeJS, Javascript , AngularJS , Mongodb and also in Data Science related projects of Data Mining, Data Analysis &amp; Machine Learning.",
-        "address": "Noida,U.P, India - 201301",
-        "mobile_numbers": "+91-7838792774, +91-8477063529",
+        "about": "Software Developer proficient in a wide variety of web applications and also Data Science enthusiast. Specially interested in web development using Python, NodeJS, Javascript , ReactJs, AngularJS , Mongodb and also in Data Science related projects of Data Mining, Data Analysis &amp; Machine Learning.",
+        "address": "Delhi, India",
+        "mobile_number_image_src": "images/mobilenumber.png",
         "timeline": [
             {
                 "event_info": "Graduated HighSchool",
