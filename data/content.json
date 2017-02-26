@@ -15,11 +15,11 @@
     ],
     "brand": {
         "name": "#kodekracker",
-        "img_src": "images/profile.png"
+        "img_src": "images/my-avatar-min.png"
     },
     "owner":{
         "name": "Akshay Pratap Singh",
-        "img_src": "images/profile.png",
+        "img_src": "images/my-avatar-min.png",
         "interest": "Web Development and Data Science",
         "hire_me": false,
         "highlighted_skills": [
@@ -36,7 +36,7 @@
                 "fa_class": "fa-code"
             }
         ],
-        "about": "Software Developer proficient in a wide variety of web applications and also Data Science enthusiast. Specially interested in web development using Python, NodeJS, Javascript , ReactJs, AngularJS , Mongodb and also in Data Science related projects of Data Mining, Data Analysis &amp; Machine Learning.",
+        "about": "Software Developer and Data Science Enthusiast who loves to write software to build great products and help businesses succeed with their goals. I am proficient in development of a wide variety of web applications. I am most passionate about developing web applications using Python, NodeJS, Javascript, ReactJs, AngularJS, Mongodb and various other bleeding edge technologies. I can also speak to databases and make servers do stuff. I like working on scalability, performance, design, and great user experiences. I have keen interest in Data Science related projects of Data Mining, Data Analysis &amp; Machine Learning. During my spare time, i love to read technology blogs and learn new languages and technology.",
         "address": "Delhi, India",
         "mobile_number_image_src": "images/mobilenumber.png",
         "timeline": [
