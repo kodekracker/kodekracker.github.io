@@ -59,6 +59,10 @@
             {
                 "event_info": "Software Developer in 91springboard",
                 "event_year": "2015"
+            },
+            {
+                "event_info": "Chief Software Engineer in Datapeace",
+                "event_year": "2017"
             }
         ],
         "skills": [
@@ -72,15 +76,15 @@
             },
             {
               "name": "JS",
-              "percent": "50"
+              "percent": "70"
             },
             {
               "name": "Python",
-              "percent": "60"
+              "percent": "70"
             },
             {
               "name": "NodeJS",
-              "percent": "50"
+              "percent": "70"
             }
         ],
         "favourite_quote": {
