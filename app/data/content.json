@@ -17,23 +17,28 @@
         "name": "#kodekracker",
         "img_src": "images/my-avatar-min.png"
     },
-    "owner":{
+    "owner": {
+        "handle_name": "@spratapakshay",
         "name": "Akshay Pratap Singh",
         "img_src": "images/my-avatar-min.png",
-        "interest": "Web Development and Data Science",
+        "interest": "Software Development and Data Science",
         "hire_me": false,
         "highlighted_skills": [
+            {
+                "text": "Pythonista",
+                "fa_class": "fa-code"
+            },
             {
                 "text": "Data Science Enthusiast",
                 "fa_class": "fa-line-chart"
             },
             {
-                "text": "Web Developer",
+                "text": "Software Developer",
                 "fa_class": "fa-trophy"
             },
             {
                 "text": "Polyglot and Avid Programmer",
-                "fa_class": "fa-code"
+                "fa_class": "fa-terminal"
             }
         ],
         "about": "Software Developer and Data Science Enthusiast who loves to write software to build great products and help businesses succeed with their goals. I am proficient in development of a wide variety of web applications. I am most passionate about developing web applications using Python, NodeJS, Javascript, ReactJs, AngularJS, Mongodb and various other bleeding edge technologies. I can also speak to databases and make servers do stuff. I like working on scalability, performance, design, and great user experiences. I have keen interest in Data Science related projects of Data Mining, Data Analysis &amp; Machine Learning. During my spare time, i love to read technology blogs and learn new languages and technology.",
@@ -61,30 +66,30 @@
                 "event_year": "2015"
             },
             {
-                "event_info": "Chief Software Engineer in Datapeace",
+                "event_info": "Senior Software Engineer in Data Peace",
                 "event_year": "2017"
             }
         ],
         "skills": [
             {
-              "name": "CSS",
-              "percent": "60"
+                "name": "CSS",
+                "percent": "60"
             },
             {
-              "name": "HTML",
-              "percent": "80"
+                "name": "HTML",
+                "percent": "80"
             },
             {
-              "name": "JS",
-              "percent": "70"
+                "name": "JS",
+                "percent": "70"
             },
             {
-              "name": "Python",
-              "percent": "70"
+                "name": "Python",
+                "percent": "70"
             },
             {
-              "name": "NodeJS",
-              "percent": "70"
+                "name": "NodeJS",
+                "percent": "70"
             }
         ],
         "favourite_quote": {
@@ -238,7 +243,7 @@
             }
         ]
     },
-    "social":[
+    "social": [
         {
             "name": "Facebook",
             "profile_url": "https://www.facebook.com/spratapakshay",
