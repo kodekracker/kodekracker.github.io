@@ -7,3 +7,5 @@ app/index.html
 # virtual environment directory
 venv/
 
+# Visual Studio Code related
+.vscode/
