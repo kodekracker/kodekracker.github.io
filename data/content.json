@@ -18,6 +18,7 @@
         "img_src": "images/my-avatar-min.png"
     },
     "owner": {
+        "handle_name": "@spratapakshay",
         "name": "Akshay Pratap Singh",
         "img_src": "images/my-avatar-min.png",
         "interest": "Software Development and Data Science",
