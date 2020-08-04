@@ -255,23 +255,18 @@
             "fa_class": "fa-twitter"
         },
         {
-            "name": "Google Plus",
-            "profile_url": "https://plus.google.com/+AkshayPratap_01",
-            "fa_class": "fa-google-plus"
-        },
-        {
             "name": "Linkedin",
             "profile_url": "https://in.linkedin.com/in/spratapakshay",
             "fa_class": "fa-linkedin"
         },
         {
             "name": "Github",
-            "profile_url": "https://github.com/KodeKracker",
+            "profile_url": "https://github.com/kodekracker",
             "fa_class": "fa-github"
         },
         {
             "name": "Stackoverflow",
-            "profile_url": "https://careers.stackoverflow.com/kodekracker",
+            "profile_url": "https://stackoverflow.com/cv/kodekracker",
             "fa_class": "fa-stack-overflow"
         }
     ]
