@@ -37,7 +37,7 @@ app.filter('cut', function () {
 // a webservice api provides data to certain angualar elements
 app.service('webServiceApi', ['$resource', '$http',function($resource, $http){
   // Root url of a web service api
-  var ROOT_URI = "https://webservices-akshayon-net.herokuapp.com";
+  var ROOT_URI = "https://api.akshayon.net";
 
   // Send mail to admin
   this.sendMail = function(form_data, success_callback, error_callback){
